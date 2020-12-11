@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rumour Source Detection</title>
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body style="margin:0;background-color: #282c34;">
+	<div id='div'>
+		<select class="select-css">
+		  <option value="karate">Karate</option>
+		  <option value="dolphin">Dolphin</option>
+		  <option value="football">Football</option>
+		</select>
+		<button id='sub'>Submit</button>
+		<button id='detect'>Detect</button>
+		<button id="restart">Restart</button>
+	</div>
+	<div style="position: absolute;" id='table'>
+		<p></p>
+	</div>
+	<script type="text/javascript" src="node_modules/csvtojson/browser/csvtojson.min.js"></script>
+	<script type="module" src="projec.mjs?version=1"></script>
+</body>
+<script>
+	const restart = document.getElementById('restart');
+	restart.addEventListener('click',()=>{
+		const url = window.location.href;
+		window.location = url;
+	}) 
+</script>
+</html>
